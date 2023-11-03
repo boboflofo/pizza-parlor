@@ -10,6 +10,6 @@ Expected Output: 5
 
 Describe Pizza.determinePrice()
 
-Test: "It should add to Pizza.price based on the amount of items in the toppings array"
+Test: "It should add to Pizza.price based on the amount of items in the toppings array with each item being amount 5"
 Code: Pizza.price if toppings = \["pepperoni"\]
 Expected Output: 5
