@@ -1,5 +1,16 @@
 function pizzaSelection() {
     this.selection = {}
+    this.currentId = 0
+}
+
+pizzaSelection.prototype.addPizza = function (pizza) {
+    const id = this.getId()
+    this.selection[id] = pizza
+}
+
+pizzaSelection.prototype.getId = function () {
+    this.currentId += 1
+    return this.currentId
 }
 
 function Pizza(toppings, size) {

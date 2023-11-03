@@ -23,3 +23,9 @@ Describe pizzaSelection()
 Test: "It should store pizza objects within the selection object"
 Code: const pizzas = new pizzaSelection()
 Expected Output: pizzas.selection = {pizza}
+
+Describe pizzaSelection.getId()
+
+Test: "It should return a unique id for every pizza added to the pizza selection object"
+Code: pizzaSelection.getId()
+Expected Output: 1
