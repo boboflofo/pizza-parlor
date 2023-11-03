@@ -22,7 +22,20 @@ function handleSubmit() {
     let toppings = []
     const checked = document.querySelectorAll('input[type="checkbox"]:checked')
     toppings = Array.from(checked).map(topping => topping.value)
-    
+    const size = document.querySelector("#size").value
+    const pizza = new Pizza(toppings,size)
+
+
+}
+
+function displayPizza(pizza) {
+    let toppingList = document.querySelector
+    pizza.toppings.forEach(topping => {
+        text += " " + topping
+    })
+    document.querySelector(".pizza-type")
+
+
 }
 
 
