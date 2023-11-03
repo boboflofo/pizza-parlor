@@ -5,7 +5,7 @@ function Pizza(toppings, size) {
     this.price = 0
 }
 
-Pizza.prototype.determinePrice = function() {
+Pizza.prototype.determinePrice = function () {
     let toppingPrice = this.toppings.length * 5
     this.price += toppingPrice
     if (this.size === "small") {
@@ -51,14 +51,14 @@ function displayPizza(pizza) {
     pizzaDisplay.append(toppingList)
     const priceTitle = document.createElement("h3")
     let price = pizza.determinePrice()
-    priceTitle.append("Cost total: $" + price)
+    priceTitle.append("Cost of Pizza: $" + price)
     pizzaDisplay.append(priceTitle)
 
 
 }
 
 
-window.addEventListener("load", function() {
+window.addEventListener("load", function () {
     const form = document.querySelector("#pizza-form")
     form.addEventListener("submit", handleSubmit)
 })
