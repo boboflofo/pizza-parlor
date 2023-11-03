@@ -6,7 +6,7 @@ Expected Output: Pizza { toppings: ["anchovies", "pineapple"], size: "medium" }
 
 Test: "It should initialize a price property in the Pizza object"
 Code: console.log(myPizza.price)
-Expected Output: 0
+Expected Output: 5
 
 Describe Pizza.determinePrice()
 
