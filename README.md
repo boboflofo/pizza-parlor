@@ -13,3 +13,7 @@ Describe Pizza.determinePrice()
 Test: "It should add to Pizza.price based on the amount of items in the toppings array with each item being amount 5"
 Code: Pizza.price if toppings = \["pepperoni"\]
 Expected Output: 5
+
+Test: "It should return a multiplied result based on the sizing of the pizza"
+Code: const myPizza = new Pizza(["anchovies", "pineapple"], "medium");
+Expected Output: Pizza.price = 15

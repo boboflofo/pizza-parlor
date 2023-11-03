@@ -7,5 +7,13 @@ function Pizza(toppings, size) {
 Pizza.prototype.determinePrice = function() {
     let toppingPrice = this.toppings.length * 5
     this.price += toppingPrice
-    let sizePricing = toppingPrice * 1
+    if (size === "small") {
+        return this.price
+    } else if (size === "medium") {
+        this.price *= 1.5
+        return this.price
+    } else if (size === "large") {
+        this.price *= 2
+        return this.price
+    }
 }
