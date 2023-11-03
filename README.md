@@ -17,3 +17,9 @@ Expected Output: 5
 Test: "It should return a multiplied result based on the sizing of the pizza"
 Code: const myPizza = new Pizza(["anchovies", "pineapple"], "medium");
 Expected Output: Pizza.price = 15
+
+Describe pizzaSelection() 
+
+Test: "It should store pizza objects within the selection object"
+Code: const pizzas = new pizzaSelection()
+Expected Output: pizzas.selection = {pizza}

@@ -1,3 +1,7 @@
+function pizzaSelection() {
+    this.selection = {}
+}
+
 function Pizza(toppings, size) {
     this.toppings = toppings
     this.size = size
