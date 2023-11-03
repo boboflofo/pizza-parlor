@@ -33,6 +33,8 @@ Pizza.prototype.determinePrice = function() {
     }
 }
 
+let pizzas = new pizzaSelection()
+
 function handleSubmit(e) {
     e.preventDefault()
     let toppings = []
@@ -40,7 +42,11 @@ function handleSubmit(e) {
     toppings = Array.from(checked).map(topping => topping.value)
     const size = document.getElementById("size").value
     const pizza = new Pizza(toppings, size)
-    displayPizza(pizza)
+    pizzas.addPizza(pizza)
+    Object.keys(pizzas.selection).forEach(function(key){
+        displayPizza(pizzas.selection[key])
+    })
+    
 
 
 }
