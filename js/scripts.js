@@ -17,3 +17,16 @@ Pizza.prototype.determinePrice = function() {
         return this.price
     }
 }
+
+function handleSubmit() {
+    let toppings = []
+    const checked = document.querySelectorAll('input[type="checkbox"]:checked')
+    toppings = Array.from(checked).map(topping => topping.value)
+    
+}
+
+
+window.addEventListener("load", function() {
+    const form = document.querySelector("#pizza-form")
+    form.addEventListener("submit", handleSubmit)
+})
