@@ -29,3 +29,9 @@ Describe pizzaSelection.getId()
 Test: "It should return a unique id for every pizza added to the pizza selection object"
 Code: pizzaSelection.getId()
 Expected Output: 1
+
+Describe pizzaSelection.addPizza()
+
+Test: "It will add a pizza object to the pizza selection object attached with the unique id as a key"
+Code: pizzaSelection.addPizza(pizza)
+Expected Output: {{1:pizza}}
