@@ -1,17 +1,3 @@
-function pizzaSelection() {
-    this.selection = {}
-    this.currentId = 0
-}
-
-pizzaSelection.prototype.addPizza = function (pizza) {
-    const id = this.getId()
-    this.selection[id] = pizza
-}
-
-pizzaSelection.prototype.getId = function () {
-    this.currentId += 1
-    return this.currentId
-}
 
 function Pizza(toppings, size) {
     this.toppings = toppings
@@ -33,20 +19,17 @@ Pizza.prototype.determinePrice = function() {
     }
 }
 
-let pizzas = new pizzaSelection()
+
 
 function handleSubmit(e) {
     e.preventDefault()
+
     let toppings = []
     const checked = document.querySelectorAll('input[type="checkbox"]:checked')
     toppings = Array.from(checked).map(topping => topping.value)
     const size = document.getElementById("size").value
     const pizza = new Pizza(toppings, size)
-    pizzas.addPizza(pizza)
-    Object.keys(pizzas.selection).forEach(function(key){
-        displayPizza(pizzas.selection[key])
-    })
-    
+    displayPizza(pizza)
 
 
 }
